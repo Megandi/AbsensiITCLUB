@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <TextView android:text="Nama"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_light"/>
+
+    <EditText
+        android:id="@+id/txtnama"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="10dp"
+        android:background="#F2F1EF"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"/>
+
+    <TextView android:text="Keterangan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/holo_blue_light"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:id="@+id/rgroup"
+        android:orientation="horizontal">
+
+        <RadioButton android:id="@+id/radio_1"
+            android:layout_width="70dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="4pt"
+            android:text="Hadir"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton android:id="@+id/radio_2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="4pt"
+            android:text="Sakit"
+            android:onClick="onRadioButtonClicked"
+            android:layout_gravity="right" />
+
+        <RadioButton android:id="@+id/radio_3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="4pt"
+            android:text="Izin"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton android:id="@+id/radio_4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textSize="4pt"
+            android:text="Alfa"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnsimpan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#009cee"
+        android:textColor="#ffffff"
+        android:text="Simpan"
+        android:onClick="save"
+        android:textSize="18sp"
+        android:layout_marginTop="155dp"
+        android:layout_marginBottom="15dp"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listdata"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="210dp" />
+
+</RelativeLayout>
